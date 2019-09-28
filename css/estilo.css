@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css?family=Lekton&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Baumans&display=swap');
+
+:root{
+    --red: #cb0000;
+}
+
+ a{
+    text-decoration: none;
+    color: var(--red);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    overflow-x: hidden;
+    font-family: 'Lekton', sans-serif;
+}
+
+h1,h2,h3{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.fadeIn{
+    opacity: 0;
+    transition: 1s all ease-in;
+}
+
+section{
+    height: 100vh;
+    
+}
+
+.titulo {
+    color: rgb(102, 102, 102);
+}
+
+section.inicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.95vw;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+}
+
+.nav{
+    align-self: center;
+    width: 25vw;
+    display: flex;
+    justify-content: space-around;
+    color: var(--red);
+}
+
+/*  --- -- -- ---  */
+
+section.projetos{
+    background: #7474c6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 150vh;
+    /* padding-top: 20px; */
+    font-size: 1.5vw;
+    
+}
+
+
+.tituloProjetos{
+    margin-bottom: 5rem;
+    font-size: 2.95vw;
+    transition: 2s all ease-in;
+    color: #ffffff;
+    margin-bottom: 0
+
+}
+
+
+.itemProjeto{
+    width: 85vw;
+    height: 15vh;
+    border: 1px solid black;
+    margin-bottom: 1rem;
+    background: #eeeeee;
+    color: black;
+    transition: 2s all ease;
+    opacity: 0;
+    padding: 10px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+
+.projeto-titulo{
+    font-family: 'Baumans', cursive;
+}
+
+.project-info{
+    display: flex;
+    flex-direction: column;  
+    text-align: center;
+}
+
+.projeto-botoes{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.projeto-botoes a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 2px 25px;
+    background: rgb(165, 0, 0);
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    
+}
+
+[deslocarDireita]{
+    transform: translate3d(-300px,0,0);
+}
+
+[deslocarEsquerda]{
+    transform: translate3d(300px,0,0);
+}
+
+/* ------ */
+
+.curriculo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: rgb(61, 61, 61) 1px 1px 5px -2px;
+    color: rgb(102, 102, 102);
+    padding: 30px;
+}
+
+.curriculo div{
+    font-size: 1.8vw;
+    margin-top: 40px;  
+    transition: 3s all ease-in;
+    flex-grow: .5;
+}
+
+.fadeInCur{
+    opacity: 0;
+}
+
+
+/* -- */
+
+.rodape{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center; 
+    font-size: 1.5vw;
+    padding: 1vw;
+}
+
+
+
+/* Animações que entram via javascript */
+
+.entrarAnimado{
+    opacity: 1;
+    font-size: 2vw;
+}
+
+.deslocarAnimadoDir{
+    transform: translate3d(0,0,0);
+    opacity: 1;
+}
+
+.deslocarAnimadoEsq{
+    transform: translate3d(0,0,0);
+    opacity: 1;
+}
+
+
+/*  */
+@media(max-width:800px){
+
+    header h1, nav span{
+        font-size: 4vw;
+    }
+
+    .entrarAnimado{
+        font-size: 5vw;
+    }
+
+    
+
+    .curriculo{
+        padding: 30px;
+    }
+
+    .curriculo h2{
+       justify-self: flex-start;
+       flex-grow: .1;
+    }
+
+    .curriculo div{
+        font-size: 3.4vw;
+        margin-top: 0;
+        flex-grow: .5;  
+    }
+
+    section.projetos{
+        height: 150vh;
+    }
+
+    .itemProjeto{
+        width: 85vw;
+        font-size: 2.5vw;
+        
+    }
+
+    .rodape{
+        font-size: 2.5vw;
+    }
+    
+}
+
+@media(max-width:400px){
+    .itemProjeto{
+        width: 85vw;
+        font-size: 3vw; 
+    }
+}
+
+@media only screen and (max-height: 600px) and (orientation : landscape){
+    section.projetos{
+        height: 200vh;
+    }
+
+    
+    .itemProjeto{
+        font-size: 2vw;
+    }
+
+    .itemProjeto{
+        height: 20vh;
+    }
+
+    .curriculo div{
+        font-size: 1.7vw;
+        margin-top: 0;
+        flex-grow: .5; 
+    }
+
+}
+
+
+
